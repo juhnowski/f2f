@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:background="@color/colorWhite">
+
+    <ImageView
+            android:layout_width="100px"
+            android:layout_height="100px" app:srcCompat="@drawable/honestgave"
+            android:id="@+id/advert_iv_avatar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"/>
+    <TextView
+            android:text="Honest gave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/advert_tv_name"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp" android:layout_marginStart="17dp"
+            app:layout_constraintStart_toEndOf="@+id/advert_iv_avatar"
+            app:layout_constraintEnd_toStartOf="@+id/advert_tv_publish_status" android:layout_marginEnd="8dp"
+            android:textSize="18sp"/>
+    <TextView
+            android:text="Barter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/advert_tv_publish_status"
+            android:textSize="30sp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textStyle="bold"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="220dp" app:srcCompat="@mipmap/logo"
+            android:id="@+id/advert_iv_picture" android:scaleType="fitCenter"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/advert_iv_avatar"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            />
+    <CheckBox
+            android:id="@+id/advert_cb_is_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@xml/checkbox_selector"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:checked="true" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/advert_iv_picture" android:onClick="advert_change_offer"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/advert_tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/advert_iv_picture" android:textSize="18sp"
+            android:textStyle="bold" app:layout_constraintEnd_toStartOf="@+id/advert_cb_is_offer"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/advert_tv_description"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/advert_cb_is_offer"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
+</android.support.constraint.ConstraintLayout>

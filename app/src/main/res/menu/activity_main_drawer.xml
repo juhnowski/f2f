@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_account_settings"
+                android:icon="@drawable/settings"
+                android:title="Настройки"/>
+        <item
+                android:id="@+id/nav_my_offer"
+                android:icon="@drawable/edit"
+                android:title="Мои объявления"/>
+        <item
+                android:id="@+id/nav_my_selection"
+                android:icon="@drawable/saved"
+                android:title="Сохраненное"/>
+        <item
+                android:id="@+id/nav_my_chats"
+                android:icon="@mipmap/my_chats"
+                android:title="Чаты"/>
+        <item
+                android:id="@+id/nav_race"
+                android:icon="@drawable/star"
+                android:title="Гонка приглашений"/>
+        <item
+                android:id="@+id/nav_divider"
+                android:title=""/>
+        <item
+                android:id="@+id/nav_invites"
+                android:title="Количество приглашенных:0"/>
+        <item
+                android:id="@+id/text_promocode"
+                android:title="Ваш промокод"/>
+        <item
+                android:title="Гонка"
+                android:id="@+id/promo_race"
+                app:actionLayout="@layout/menu_promo_view"
+                android:orderInCategory="1"
+                app:showAsAction="ifRoom|collapseActionView"/>
+        <item
+                android:title=""
+                android:id="@+id/promo_email"
+                app:actionLayout="@layout/menu_promo_email"
+                android:orderInCategory="1"
+                app:showAsAction="ifRoom|collapseActionView"/>
+    </group>
+
+
+    <!--<item android:title="@string/communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_share"-->
+                    <!--android:icon="@drawable/ic_menu_share"-->
+                    <!--android:title="@string/share"/>-->
+            <!--<item-->
+                    <!--android:id="@+id/nav_send"-->
+                    <!--android:icon="@drawable/ic_menu_send"-->
+                    <!--android:title="@string/send"/>-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

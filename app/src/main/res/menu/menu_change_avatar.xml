@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/menugroup0" >
+    <item android:id="@+id/save_new_avatar"
+          android:title="Save"
+          app:showAsAction="ifRoom"/>
+    </group>
+    <group android:id="@+id/menugroup1" >
+        <item
+                android:id="@+id/popup_change_avatar_instagram"
+                android:title="From instagram account"/>
+        <item
+                android:id="@+id/popup_change_avatar_camera"
+                android:title="Camera"/>
+        <item
+                android:id="@+id/popup_change_avatar_from_gallery"
+                android:title="From gallery"/>
+        <item
+                android:id="@+id/popup_change_avatar_icloud"
+                android:title="iCloud"/>
+        <item
+                android:id="@+id/popup_change_avatar_dropbox"
+                android:title="Dropbox"/>
+        <item
+                android:id="@+id/popup_change_avatar_delete"
+                android:title="Delete avatar"/>
+        <!--<item-->
+        <!--android:id="@+id/popup_change_from_gallery"-->
+        <!--android:title="From gallery">-->
+        <!--<menu>-->
+        <!--<item-->
+        <!--android:id="@+id/submenu"-->
+        <!--android:title="Подменю"/>-->
+        <!--</menu>-->
+        <!--</item>-->
+    </group>
+    <group android:id="@+id/menugroup2" >
+        <!--<item-->
+        <!--android:id="@+id/menu4"-->
+        <!--android:checkable="true"-->
+        <!--android:checked="true"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:title="Popup menu item 4"/>-->
+        <item
+                android:id="@+id/popup_change_avatar_cancel"
+                android:title="Cancel"
+                android:enabled="false"/>
+    </group>
+</menu>

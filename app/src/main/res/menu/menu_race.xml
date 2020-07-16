@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.f2f.face2face.MyChat">
+
+    <item android:id="@+id/race_rules"
+          android:title="Правила"
+          android:orderInCategory="100"
+          app:showAsAction="ifRoom"/>
+</menu>

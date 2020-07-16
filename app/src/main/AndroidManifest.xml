@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.f2f.face2face">
+
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name=".Login"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Face2Face"
+                android:label="@string/title_activity_main"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".AccountSettings"
+                android:label="@string/title_account_settings"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".ChangeAvatar"
+                android:label="@string/title_activity_change_avatar"
+                android:parentActivityName=".AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.AccountSettings"/>
+        </activity>
+
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="com.f2f.face2face.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+                android:name=".ChangePassword"
+                android:parentActivityName=".AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.AccountSettings"/>
+        </activity>
+        <activity
+                android:name=".InstagrammAccount"
+                android:parentActivityName=".AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.AccountSettings"/>
+        </activity>
+        <activity
+                android:name=".ChangeAccount"
+                android:parentActivityName=".AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.AccountSettings"/>
+        </activity>
+        <activity
+                android:name=".MyChat"
+                android:label="@string/title_activity_my_chat"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".MessageListActivity"
+                android:label="@string/title_activity_my_chat"
+                android:parentActivityName=".MyChat">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity android:name=".ItemMessageReceived">
+        </activity>
+        <activity
+                android:name=".Subscription"
+                android:label="Подписка"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".PrivacyPolicy"
+                android:label="Политика конфиденциальности"
+                android:parentActivityName=".Subscription">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Subscription"/>
+        </activity>
+        <activity
+                android:name=".PublicOffert"
+                android:label="Пeубличная оферта"
+                android:parentActivityName=".Subscription">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Subscription"/>
+        </activity>
+        <activity
+                android:name=".Registration"
+                android:parentActivityName=".Login"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Login"/>
+        </activity>
+        <activity
+                android:name=".InstagramResult"
+                android:label="Подтвердить аккаунт"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".SearchOptions"
+                android:label="Search Options"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".RaceActivity"
+                android:label="Гонка приглашений"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity
+                android:name=".Promo"
+                android:label="Гонка приглашений - Правила"
+                android:parentActivityName=".RaceActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.RaceActivity"/>
+        </activity>
+        <activity
+                android:name=".CategoriesList"
+                android:label="Категории"
+                android:parentActivityName=".SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.SearchOptions"/>
+        </activity>
+        <activity
+                android:name=".KeywordsList"
+                android:label="Ключевые слова"
+                android:parentActivityName=".SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.SearchOptions"/>
+        </activity>
+        <activity
+                android:name=".LanguigeList"
+                android:label="Язык"
+                android:parentActivityName=".SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.SearchOptions"/>
+        </activity>
+        <activity
+                android:name=".PaymentList"
+                android:label="Способ оплаты"
+                android:parentActivityName=".SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.SearchOptions"/>
+        </activity>
+        <activity
+                android:name=".OrdersList"
+                android:label="Сортировка"
+                android:parentActivityName=".SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.SearchOptions"/>
+        </activity>
+        <activity
+                android:name=".AdvertView"
+                android:label="Просмотр"
+                android:parentActivityName=".Face2Face">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+        <activity android:name=".AdvertNew"
+                  android:label="Новое объявление"
+                  android:parentActivityName=".Face2Face"
+                  android:windowSoftInputMode="stateVisible|adjustPan|adjustResize">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.f2f.face2face.Face2Face"/>
+        </activity>
+    </application>
+
+</manifest>

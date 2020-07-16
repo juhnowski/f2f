@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/save_new_advert"
+          android:title="Отправить"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/advert_new_add_picture"
+          android:title="Добавить картинку"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/advert_new_photo_picture"
+          android:title="Сделать фото"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/advert_new_gallery_picture"
+          android:title="Выбрать из галлереи"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/advert_new_delete_picture"
+          android:title="Удалить картинку"
+          app:showAsAction="ifRoom"/>
+</menu>

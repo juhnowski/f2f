@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".AccountSettings"
+        android:orientation="vertical"
+        android:gravity="top">
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:id="@+id/pb_account_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+            android:text="@string/account_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView6"
+            android:background="@color/colorTextTitleBackground" android:textSize="18sp"
+            android:textColor="@color/colorBlack" android:textStyle="bold"/>
+    <TextView
+            android:text="@string/change_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView7" android:textSize="18sp"
+            android:padding="8dp" android:onClick="change_account" android:textColor="@color/colorBlack"/>
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+    />
+    <TextView
+            android:text="@string/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView8" android:textSize="18sp"
+            android:padding="8dp" android:onClick="change_password" android:textColor="@color/colorBlack"/>
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+    />
+    <TextView
+            android:text="@string/change_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView9" android:textSize="18sp"
+            android:padding="8dp" android:onClick="change_avatar" android:textColor="@color/colorBlack"/>
+    <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+    />
+    <TextView
+            android:text="@string/associate_an_instagram_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView10" android:textSize="18sp"
+            android:padding="8dp" android:onClick="instagramm_account" android:textColor="@color/colorBlack"/>
+    <TextView
+            android:text="@string/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView11"
+            android:background="@color/colorTextTitleBackground" android:textSize="18sp"
+            android:textColor="@color/colorBlack" android:textStyle="bold"/>
+    <TextView
+            android:text="@string/logoff_from_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView12" android:textSize="18sp"
+            android:clickable="true" android:padding="8dp" android:onClick="logoff"
+            android:textColor="@color/colorBlack"/>
+    <TextView
+            android:text="Удаление"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView_Delete"
+            android:background="@color/colorTextTitleBackground" android:textSize="18sp"
+            android:textColor="@color/colorBlack" android:textStyle="bold"/>
+    <TextView
+            android:text="Удалить аккаунт"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView_DeleteAccount" android:textSize="18sp"
+            android:clickable="true" android:padding="8dp" android:onClick="delete_account"
+            android:textColor="@color/colorBlack"/>
+    <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+    />
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/logo" android:id="@+id/imageView6"/>
+
+</LinearLayout>
